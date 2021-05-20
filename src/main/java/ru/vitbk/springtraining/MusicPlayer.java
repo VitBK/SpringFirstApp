@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Component
+//@Component
 public class MusicPlayer {
 
-//    private List<Music> musicList = new ArrayList<>();
+    private List<Music> musicList = new ArrayList<>();
     @Value("${musicPlayer.name}")
     private String name;
     @Value("${musicPlayer.volume}")
@@ -20,22 +20,23 @@ public class MusicPlayer {
 //    private ClassicalMusic classicalMusic;
 //    private RockMusic rockMusic;
 
-    private Music music1;
-    private Music music2;
+//    private Music music1;
+//    private Music music2;
 
-    @Autowired
-    public MusicPlayer(@Qualifier("classicalMusic") Music music1, @Qualifier("someRockMusic") Music music2) {
-        this.music1 = music1;
-        this.music2 = music2;
+//    @Autowired
+//    public MusicPlayer(@Qualifier("classicalMusic") Music music1, @Qualifier("someRockMusic") Music music2) {
+//        this.music1 = music1;
+//        this.music2 = music2;
+//    }
+
+
+    public MusicPlayer(List<Music> musicList) {
+        this.musicList = musicList;
     }
 
-    public String playMusic(Genre genre) {
+    public void playMusic() {
         int index = new Random().nextInt(3);
-        if (genre == Genre.CLASSICAL) {
-            return music1.getSong().get(index);
-        } else {
-            return music2.getSong().get(index);
-        }
+        System.out.println(musicList.get(index).getSong());
     }
 
     //    @Autowired

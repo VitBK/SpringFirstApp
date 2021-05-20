@@ -9,16 +9,9 @@ import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 public class ClassicalMusic implements Music {
 
-    private static final List<String> SONGS = new ArrayList<>();
-
-    static {
-        SONGS.add("Hungarian Rhapsody");
-        SONGS.add("Moonlight Sonata");
-        SONGS.add("The Four Seasons");
-    }
 
 //    private ClassicalMusic() {
 //
@@ -29,8 +22,8 @@ public class ClassicalMusic implements Music {
 //    }
 
     @Override
-    public List<String> getSong() {
-        return SONGS;
+    public String getSong() {
+        return "Moonlight Sonata";
     }
 //надо добавить эту зависимость чтобы работали старые аннотации
 //<dependency>

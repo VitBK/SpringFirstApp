@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 public class RapMusic implements Music {
 
     @Override
-    public List<String> getSong() {
-        return null;
+    public String getSong() {
+        return "It was a good day";
     }
 }
