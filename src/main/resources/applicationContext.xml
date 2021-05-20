@@ -7,14 +7,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
+    <context:component-scan base-package="ru.vitbk.springtraining"/>
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="musicBean1"
-          class="ru.vitbk.springtraining.ClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy"
-          factory-method="getClassicalMusic">
-    </bean>
+<!--    <bean id="musicBean1"-->
+<!--          class="ru.vitbk.springtraining.ClassicalMusic"-->
+<!--          init-method="doMyInit"-->
+<!--          destroy-method="doMyDestroy"-->
+<!--          factory-method="getClassicalMusic">-->
+<!--    </bean>-->
 
 
 <!--    <bean id="musicBean2"-->
